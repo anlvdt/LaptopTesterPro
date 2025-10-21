@@ -1,0 +1,64 @@
+
+        
+        # Phân tích GPU (tự động phát hiện series)
+        gpu_upper = gpu_name.upper()
+        gpu_tier = 
+
+        
+        # Phân tích RAM
+        ram_tier = 
+
+        
+        # Thêm phân tích khả năng sử dụng
+        self.show_hardware_capability(hw_info)
+        
+        result_text = t(
+
+        
+        # Tạo capabilities dựa trên tổng hợp CPU + GPU + RAM
+        capabilities = []
+        
+        if cpu_tier in [
+
+        cpu_upper = cpu_name.upper()
+        
+        import re
+        
+        # Phát hiện thế hệ Intel (tất cả từ Gen 1-15+)
+        intel_gen = 0
+        if 
+ in cpu_upper:
+            # Cách 1: i3-12400, i5-10400, i7-8750H
+            gen_match = re.search(r'I[3579]-?(\d{1,2})\d{3}', cpu_upper)
+            if gen_match:
+                intel_gen = int(gen_match.group(1))
+            else:
+                # Cách 2: 
+)
+        
+        # Trích xuất RAM GB
+        ram_match = re.search(r'([\d.]+)\s*GB', ram_str)
+        ram_gb = float(ram_match.group(1)) if ram_match else 0
+        
+        capabilities = self._analyze_capabilities(cpu_name, gpu_name, ram_gb)
+        
+        if not capabilities:
+            return
+        
+        # Hiển thị capabilities
+        cap_frame = ctk.CTkFrame(self.action_frame, fg_color=
+Chi tiết
+Code: VS, Android Studio, Docker\nVM: 3-4 máy ảo\n50+ Chrome tabs
+Hiển thị nhận định khả năng sử dụng phần cứng
+Hàm chung phân tích khả năng phần cứng
+Học Tập
+Model Ổ Cứng
+Ngày BIOS
+Nhấn 'Bắt đầu Test' để đọc thông tin phần cứng từ BIOS. Sau đó so sánh với thông tin quảng cáo của người bán.
+Trạng thái
+UEFI (phát hiện qua Windows)
+Văn Phòng
+Văn Phòng & Code
+Zoom, Teams\nWord, PPT\nTra cứu web
+Đây là bước quan trọng nhất để chống lừa đảo. Các thông tin dưới đây được đọc trực tiếp từ BIOS và linh kiện phần cứng. Chúng cực kỳ khó làm giả từ bên trong Windows.
+Đồ Họa Pro

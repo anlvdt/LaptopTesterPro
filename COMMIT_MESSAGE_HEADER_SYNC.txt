@@ -1,0 +1,138 @@
+# 🎯 Fix: Header Synchronization with Language Toggle
+
+## Version 2.7.1 - 15/10/2025
+
+---
+
+## ✅ What's Fixed
+
+**Issue:** When toggling language while viewing Introduction or Guide screens, the header components (slogan, developer info, address) were not updating because the code returned early before reaching the header update logic.
+
+**Solution:** Moved header update code to execute BEFORE frame type checking, ensuring all header components are always updated regardless of which screen is active.
+
+---
+
+## 🔧 Technical Changes
+
+### File Modified:
+- `main_enhanced_auto.py` (Method: `toggle_language_enhanced`)
+
+### Change Type:
+**Code Reordering** - Moved ~20 lines of header update code from bottom to top of the method.
+
+### Before (Broken):
+```python
+def toggle_language_enhanced(self):
+    CURRENT_LANG = "en" if CURRENT_LANG == "vi" else "vi"
+    
+    # Check frame type
+    if frame_class_name == "IntroductionFrame":
+        recreate_frame()
+        return  # ← STOPS HERE!
+    
+    # Update header (NEVER REACHED!)
+    self.slogan_label.configure(...)
+    self.dev_label.configure(...)
+```
+
+### After (Fixed):
+```python
+def toggle_language_enhanced(self):
+    CURRENT_LANG = "en" if CURRENT_LANG == "vi" else "vi"
+    
+    # ✅ Update header FIRST
+    self.slogan_label.configure(...)
+    self.dev_label.configure(...)
+    self.address_label.configure(...)
+    self.lang_btn.configure(...)
+    self.donate_btn.configure(...)
+    
+    # THEN check frame type
+    if frame_class_name == "IntroductionFrame":
+        recreate_frame()
+        return  # ← Header already updated!
+```
+
+---
+
+## 🧪 Test Results
+
+### Components Updated:
+
+| Component | Before | After |
+|-----------|--------|-------|
+| Slogan Label | ❌ Not updated on Intro/Guide | ✅ Always updated |
+| Developer Label | ❌ Not updated on Intro/Guide | ✅ Always updated |
+| Address Label | ❌ Not updated on Intro/Guide | ✅ Always updated |
+| Language Button | ❌ Not updated on Intro/Guide | ✅ Always updated |
+| Donate Button | ❌ Not updated on Intro/Guide | ✅ Always updated |
+
+### Screens Tested:
+
+| Screen | Header Update |
+|--------|---------------|
+| Home Screen | ✅ Working (before & after) |
+| WizardFrame | ✅ Working (before & after) |
+| IntroductionFrame | ✅ NOW WORKING |
+| GuideFrame | ✅ NOW WORKING |
+
+---
+
+## 📝 Impact
+
+### User Experience:
+- **Perfect Sync:** Header always matches current language
+- **No Confusion:** All UI elements update together
+- **Consistent:** Same behavior across all screens
+
+### Code Quality:
+- **Clear Logic:** Shared components updated first
+- **No Duplication:** Single update point for header
+- **Maintainable:** Easy to understand execution order
+
+---
+
+## 💡 Key Principle Applied
+
+**"Update shared components BEFORE branching logic"**
+
+This ensures that components used across multiple screens are always updated, regardless of which specific screen handling code runs.
+
+---
+
+## 📚 Documentation
+
+Created: `FIX_HEADER_SYNC_LANGUAGE.md`
+- Root cause analysis
+- Code comparison (before/after)
+- Test results
+- Design principle explanation
+
+Updated: `TONG_KET_CAI_TIEN.md`
+- Added section 7 about header sync
+- Updated statistics
+- Updated checklist
+- Bumped version to 2.7.1
+
+---
+
+## 🎯 Combined Language Toggle Fixes
+
+This completes the language toggle feature:
+
+1. **Fix 1 (v2.7.0):** Toggle doesn't return to home
+   - Added IntroductionFrame/GuideFrame detection
+   
+2. **Fix 2 (v2.7.1):** Header syncs with language ✅ THIS FIX
+   - Moved header update before frame checks
+
+**Result:** Perfect bilingual experience across all screens!
+
+---
+
+**Lines changed:** ~20 lines (reordered)
+**Files modified:** 1 (main_enhanced_auto.py)
+**Files created:** 1 (FIX_HEADER_SYNC_LANGUAGE.md)
+**Files updated:** 1 (TONG_KET_CAI_TIEN.md)
+**Bug severity:** Medium (UI inconsistency)
+**Fix complexity:** Low (simple reordering)

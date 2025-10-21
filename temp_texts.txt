@@ -1,0 +1,100 @@
+﻿        "export_report": "XUẤT BÁO CÁO", "export_pdf": "Xuất PDF", "export_excel": "Xuất Excel", "copy_text": "Copy Text",
+        
+        # Common UI Elements
+        "why_test": "Tại sao cần test?", "how_to": "Cách thực hiện:", "security_info": "THÔNG TIN BẢO MẬT",
+        "start_test_btn": "Bắt đầu Test", "stop_test_btn": "Dừng Test", "clear_canvas": "Xóa vết vẽ",
+        "test_completed": "Test hoàn thành", "no_issues": "Không có vấn đề", "issues_found": "Có vấn đề",
+        "all_good": "Tất cả đều tốt", "config_match": "Cấu hình khớp", "mismatch": "Có sai lệch",
+        "screen_ok": "Màn hình bình thường", "input_ok": "Thiết bị nhập tốt", "audio_clear": "Âm thanh rõ ràng",
+        "webcam_ok": "Webcam hoạt động tốt", "cpu_good": "CPU ổn định", "gpu_good": "GPU ổn định",
+        "speed_good": "Tốc độ tốt", "battery_good": "Pin tốt", "ready_to_test": "Sẵn sàng test",
+        "choose_mode": "Chọn chế độ", "working_well": "Hoạt động tốt", "not_working": "Không hoạt động",
+        "temperature": "Nhiệt độ", "frequency": "Tần số", "power": "Công suất", "speed": "Tốc độ",
+        "record": "Ghi âm", "stop": "Dừng", "play": "Phát", "running": "Đang chạy",
+        
+        # Status Messages
+        "status_good": "Tốt", "status_error": "Lỗi", "status_warning": "Cảnh báo", "status_skip": "Bỏ qua"
+    },
+    "en": {
+        # Main UI
+        "title": "LaptopTester Pro - Comprehensive Laptop Testing",
+        "overview": "Overview", "start_test": "Start", "individual_test": "Individual", "exit": "Exit",
+        "dark_mode": "Dark", "language": "Language", "basic_mode": "Basic", "expert_mode": "Expert",
+        
+        # Test Steps
+        "hardware_fingerprint": "Hardware Fingerprint", "license_check": "Windows License", "system_info": "System Info",
+        "harddrive_health": "HDD Health", "screen_test": "Screen Test", "keyboard_test": "Keyboard & Touchpad",
+        "battery_health": "Battery Health", "audio_test": "Audio Test", "webcam_test": "Webcam Test",
+        "cpu_stress": "CPU Stress Test", "harddrive_speed": "HDD Speed", "gpu_stress": "GPU Stress Test",
+        "network_test": "Network Test", "thermal_test": "Thermal & Performance", "system_monitor": "System Monitor",
+        
+        # Navigation
+        "summary": "Summary", "continue": "Continue", "skip": "Skip", "good": "Good", "error": "Error",
+        "previous": "Previous", "next": "Next", "complete": "Complete", "ready": "Ready",
+        "checking": "Checking", "testing": "Testing", "loading": "Loading", "finished": "Finished",
+        
+        # Report & Summary
+        "report_title": "LAPTOP TESTING REPORT", "report_subtitle": "Comprehensive hardware condition analysis",
+        "total_tests": "Total Tests", "passed_tests": "Passed", "failed_tests": "Failed", "success_rate": "Success Rate",
+        "laptop_good": "LAPTOP IN GOOD CONDITION", "laptop_warning": "LAPTOP NEEDS ATTENTION", "laptop_bad": "LAPTOP HAS SERIOUS ISSUES",
+        "recommendation_good": "Laptop operates stably, can be purchased at reasonable price.",
+        "recommendation_warning": "Some minor issues detected, need careful inspection before decision.",
+        "recommendation_bad": "Multiple errors detected, not recommended to buy or need significant price reduction.",
+        
+        # Categories
+        "security_category": "Security & Identity", "performance_category": "Performance",
+        "interface_category": "Interface", "hardware_category": "Hardware",
+        
+        # Tools & Export
+        "professional_tools": "ADDITIONAL PROFESSIONAL TOOLS",
+        "tools_description": "For deeper inspection, use these professional tools:",
+        "install_command": "Install command:", "homepage": "Homepage", "usage_guide": "TOOL USAGE GUIDE",
+        "export_report": "EXPORT REPORT", "export_pdf": "Export PDF", "export_excel": "Export Excel", "copy_text": "Copy Text",
+        
+        # Common UI Elements
+        "why_test": "Why test?", "how_to": "How to perform:", "security_info": "SECURITY INFORMATION",
+        "start_test_btn": "Start Test", "stop_test_btn": "Stop Test", "clear_canvas": "Clear Drawing",
+        "test_completed": "Test completed", "no_issues": "No issues", "issues_found": "Issues found",
+        "all_good": "All good", "config_match": "Config matches", "mismatch": "Mismatch detected",
+        "screen_ok": "Screen normal", "input_ok": "Input devices OK", "audio_clear": "Audio clear",
+        "webcam_ok": "Webcam working", "cpu_good": "CPU stable", "gpu_good": "GPU stable",
+        "speed_good": "Speed good", "battery_good": "Battery good", "ready_to_test": "Ready to test",
+        "choose_mode": "Choose Mode", "working_well": "Working well", "not_working": "Not working",
+        "temperature": "Temperature", "frequency": "Frequency", "power": "Power", "speed": "Speed",
+        "record": "Record", "stop": "Stop", "play": "Play", "running": "Running",
+        
+        # Status Messages
+        "status_good": "Good", "status_error": "Error", "status_warning": "Warning", "status_skip": "Skipped"
+    }
+}
+
+def get_text(key):
+    return LANG[CURRENT_LANG].get(key, key)
+
+def toggle_theme():
+    global CURRENT_THEME
+    CURRENT_THEME = "dark" if CURRENT_THEME == "light" else "light"
+    ctk.set_appearance_mode(CURRENT_THEME)
+    
+    if CURRENT_THEME == "dark":
+        dark_colors = Theme.get_dark_colors()
+        for key, value in dark_colors.items():
+            setattr(Theme, key, value)
+    else:
+        # Reset to light colors
+        Theme.BACKGROUND = "#ffffff"
+        Theme.FRAME = "#f8fafc"
+        Theme.CARD = "#ffffff"
+        Theme.BORDER = "#e2e8f0"
+        Theme.SEPARATOR = "#cbd5e0"
+        Theme.TEXT = "#1e293b"
+        Theme.TEXT_SECONDARY = "#64748b"
+        Theme.ACCENT = "#3b82f6"
+        Theme.ACCENT_HOVER = "#2563eb"
+
+def toggle_language():
+    global CURRENT_LANG
+    CURRENT_LANG = "en" if CURRENT_LANG == "vi" else "vi"
+
+# GitHub Copilot Theme System
+class Theme:

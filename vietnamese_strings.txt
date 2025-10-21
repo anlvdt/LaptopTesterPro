@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "c:\MyApps\LaptopTester\fix_translation_100.py", line 77, in <module>
+    main()
+  File "c:\MyApps\LaptopTester\fix_translation_100.py", line 66, in main
+    print("T\xecm chu\u1ed7i ti\u1ebfng Vi\u1ec7t trong", file_path)
+  File "C:\Users\Ale01\AppData\Local\Programs\Python\Python312\Lib\encodings\cp1258.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\xec' in position 1: character maps to <undefined>

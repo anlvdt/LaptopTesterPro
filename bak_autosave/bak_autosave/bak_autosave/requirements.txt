@@ -1,0 +1,26 @@
+# Core GUI Framework
+customtkinter>=5.2.0
+
+# System Information & Hardware Monitoring
+psutil>=5.9.0
+
+# Image Processing & Computer Vision
+Pillow>=10.0.0
+opencv-python>=4.8.0
+
+# Media & Input
+pygame>=2.5.0
+sounddevice>=0.4.6
+keyboard>=0.13.5
+
+# Web Scraping & HTML Parsing
+beautifulsoup4>=4.12.0
+
+# Scientific & Data
+numpy>=1.24.0
+scipy>=1.11.0
+
+# Windows-specific libraries
+wmi>=1.5.1; platform_system == 'Windows'
+pywifi>=1.1.12; platform_system == 'Windows'
+pywin32>=306; platform_system == 'Windows'
