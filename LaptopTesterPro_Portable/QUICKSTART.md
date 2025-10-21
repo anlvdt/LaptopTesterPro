@@ -1,6 +1,6 @@
-﻿[Previous content remains the same...]
+﻿[Phần nội dung trước giữ nguyên...]
 
-## Contact Support
+## Liên Hệ Hỗ Trợ
 - Email: anlvdt@gmail.com
 - GitHub: https://github.com/anlvdt/LaptopTesterPro.git
 - Discord: https://discord.gg/laptoptester
