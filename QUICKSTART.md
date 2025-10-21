@@ -50,4 +50,5 @@
 ## Liên Hệ Hỗ Trợ
 
 - Tạo issue trên GitHub
-- Email: support@laptoptester.pro
+- Email: anlvdt@gmail.com
+

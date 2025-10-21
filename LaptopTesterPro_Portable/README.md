@@ -65,6 +65,7 @@
 - .NET Framework 4.7.2
 
 ##  Hỗ Trợ 24/7
-- Email: support@laptoptester.pro
+- Email: anlvdt@gmail.com
 - GitHub Issues
 - Discord Community
+

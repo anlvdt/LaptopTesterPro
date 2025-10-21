@@ -53,3 +53,4 @@ Phần mềm kiểm tra và chẩn đoán laptop chuyên nghiệp với công ng
 ## License
 
 [MIT License](LICENSE)
+
