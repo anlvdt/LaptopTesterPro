@@ -1,6 +1,6 @@
-﻿[Previous content remains the same...]
+﻿
 
 ## Contact Support
 - Email: anlvdt@gmail.com
 - GitHub: https://github.com/anlvdt/LaptopTesterPro.git
-- Discord: https://discord.gg/laptoptester
+
