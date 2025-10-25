@@ -30,8 +30,6 @@ Phần mềm kiểm tra và chẩn đoán laptop chuyên nghiệp với công ng
  **Chương Trình Affiliate**
 - Phần mềm có hiển thị đề xuất sản phẩm từ các đối tác uy tín
 - Doanh thu từ affiliate giúp duy trì và phát triển phần mềm
-- Người dùng được giới thiệu sản phẩm chất lượng với giá ưu đãi
-- Tất cả đề xuất đều minh bạch và có thể tắt trong cài đặt
 
 ## Cài Đặt
 
