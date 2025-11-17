@@ -38,24 +38,3 @@
 2. Phát hiện vật cản
 3. Đánh giá chất lượng
 4. Báo cáo an ninh
-
-## Chương Trình Affiliate
-
-### Giới Thiệu
-- Hiển thị đề xuất sản phẩm chất lượng
-- Hợp tác với đối tác uy tín
-- Doanh thu hỗ trợ phát triển
-- Minh bạch và có thể tắt
-
-### Cách Hoạt Động
-1. Phân tích nhu cầu người dùng
-2. Đề xuất sản phẩm phù hợp
-3. Liên kết đến đối tác uy tín
-4. Chia sẻ doanh thu để duy trì phát triển
-
-### Quyền Lợi Người Dùng
-- Được giới thiệu sản phẩm chất lượng
-- Giá ưu đãi từ đối tác
-- Hỗ trợ phát triển phần mềm
-- Tùy chọn tắt quảng cáo
-

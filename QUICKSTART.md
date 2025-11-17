@@ -33,20 +33,7 @@
    - Chọn "Kiểm Tra Camera"
    - Làm theo hướng dẫn
    - Nhận báo cáo an ninh
-
-## 3. Chương Trình Affiliate
-
-- Xem đề xuất sản phẩm chất lượng
-- Giá ưu đãi từ đối tác tin cậy
-- Hỗ trợ phát triển phần mềm
-- Tùy chọn tắt trong cài đặt
-
-## 4. Xử Lý Sự Cố
-
-- **Báo cáo không chính xác**: Cập nhật cơ sở dữ liệu
-- **Phím không nhận**: Kiểm tra driver bàn phím
-- **Camera không hoạt động**: Cập nhật driver webcam
-
+     
 ## Liên Hệ Hỗ Trợ
 
 - Tạo issue trên GitHub
